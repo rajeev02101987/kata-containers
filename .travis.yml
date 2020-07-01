@@ -35,6 +35,8 @@ script:
 
 jobs:
   include:
+  - name: arm64 test
+    os: linux
   - name: x86_64 test
     os: linux
   - name: ppc64le test
