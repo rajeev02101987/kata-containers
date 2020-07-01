@@ -8,7 +8,9 @@ os: linux
 language: go
 go: 1.14.4
 env: target_branch=$TRAVIS_BRANCH
-
+arch:
+  - arm64
+  - amd64
 before_install:
   - git remote set-branches --add origin "${TRAVIS_BRANCH}"
   - git fetch
@@ -35,8 +37,6 @@ script:
 
 jobs:
   include:
-  - name: arm64 test
-    os: linux
   - name: x86_64 test
     os: linux
   - name: ppc64le test
