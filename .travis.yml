@@ -12,7 +12,7 @@ env: target_branch=$TRAVIS_BRANCH
 before_install:
   - git remote set-branches --add origin "${TRAVIS_BRANCH}"
   - git fetch
-  - apt-get install haveged
+  - sudo apt-get install haveged
   - "ci/setup.sh"
 
 # we use install to run check agent
